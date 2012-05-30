@@ -1,0 +1,319 @@
+html
+{ height: 100%;}
+
+*
+{ margin: 0;
+  padding: 0;}
+
+body
+{ font: normal .80em 'trebuchet ms', arial, sans-serif;
+  background: url(../pattern.png) fixed;
+  color: #515151;
+  cursor: default;}
+
+p
+{ padding: 0 0 5px 0;
+  line-height: 1.5em;
+  font-size: 107%;}
+
+img
+{ border: 0;}
+
+h1, h2, h3, h4, h5, h6 
+{ font: normal 250% 'Yanone Kaffeesatz', arial, sans-serif;
+  margin: 0 0 15px 0;
+  padding: 5px 0 5px 0;}
+
+h2
+{ font: normal 170% 'Yanone Kaffeesatz', arial, sans-serif;
+  margin: 0;
+  padding: 0 0 8px 0;}
+
+h3
+{ font-size: 200%;
+  margin: 0 0 9px 0;
+  }
+
+h4, h5, h6
+{ margin: 0;
+  padding: 0 0 5px 0;
+  font: normal 100% arial, sans-serif;
+  color: #F14E23;
+  line-height: 1em;}
+
+h5, h6
+{ font: italic 95% arial, sans-serif;
+  padding-bottom: 15px;}
+
+a, a:hover
+{ outline: none;
+  text-decoration: none;
+  color: #00b4ff;}
+
+a:hover
+{ text-decoration: underline;}
+
+.left
+{ float: left;
+  width: auto;
+  margin-right: 10px;}
+
+.right
+{ float: right; 
+  width: auto;
+  margin-left: 10px;}
+
+.center
+{ display: block;
+  text-align: center;
+  margin: 20px auto;}
+
+ul
+{ margin: 2px 0 22px 17px;}
+
+ul li
+{ list-style-type: circle;
+  margin: 0 0 0 0; 
+  padding: 0 0 4px 5px;}
+
+ol
+{ margin: 8px 0 22px 20px;}
+
+ol li
+{ margin: 0 0 11px 0;}
+
+#main, #header, #logo, #menubar, #site_content, #footer
+{ margin-left: auto; 
+  margin-right: auto;}
+
+#main
+{ width: 950px;
+  margin: 20px auto;}
+
+#header
+{ width: 952px;
+  height: 145px;}
+
+#logo
+{ width: 950px;
+  float: left;
+  height: 100px;
+  background: transparent;
+  padding: 0 0 0px 10px;}
+
+#logo h1
+{ font: normal 350% 'Yanone Kaffeesatz', arial, sans-serif;
+  padding: 5px 0 0 17px;
+  float: left;}
+
+#logo h1 a
+{ color: #00b4ff;
+  text-decoration: none;}
+
+#logo h1 a:hover
+{ color: #515151;
+  text-decoration: none;}
+
+.slogan
+{ float: right; 
+  padding-right: 25px;
+  text-align: right; 
+  font: 500% 'tangerine', arial; 
+  color: #111;}
+
+#menubar
+{ height: 46px;
+  width: 700px;
+  margin: 0px auto -1px auto;
+  float: right;
+  padding: 0px 0 0 0;} 
+
+ul#menu
+{ float: right;}
+
+ul#menu li
+{ float: left;
+  padding: 0 0 0px 0px;
+  list-style: none;
+  margin: 2px 0 0 0;
+  background: transparent;}
+
+ul#menu li a
+{ font: normal 170% 'Yanone Kaffeesatz', sans-serif;
+  text-decoration: none;
+  display: block; 
+  float: left; 
+  height: 20px;
+  padding: 7px 23px 15px 23px;
+  text-align: center;} 
+
+ul#menu li.current a
+{ height: 20px;
+  padding: 6px 22px 15px 22px;}
+
+ul#menu li.current a
+{ background: #fff;
+  border: 1px solid #ddd;
+  border-bottom: 0;}
+
+#site_content
+{ width: 950px;
+  overflow: hidden;
+  margin: 0 auto 0 auto;
+  padding: 0;
+  background: #fff;
+  border: 1px solid #515151;} 
+
+#sidebar_container
+{ float: right;
+  width: 250px;
+  margin: 25px 0;}
+
+.sidebar
+{ float: right;
+  width: 200px;
+  margin: 0 24px 27px 0;
+  background: #eeeeee;
+  border: 1px solid #515151;
+  padding: 0 15px 15px 15px;}
+
+.sidebar h3, .content h1
+{ padding: 10px 15px;
+  margin: 0 1px;}
+
+.sidebar h1
+{ padding: 5px 0 0 0;}
+
+.sidebar input
+{ padding: 5px 10px;
+  margin: 10px 0px;}
+
+.paperclip
+{ float: left;
+  position: relative; 
+  z-index: 0;
+  vertical-align: middle; 
+  margin: -27px 0 -60px -30px;}
+
+#content
+{ text-align: left;
+  width: 630px;
+  padding: 25px 0 5px 25px;
+  margin: 0;}
+
+#content ul
+{ margin: 2px 0 22px 0px;}
+
+#content ul li
+{ list-style-type: none;
+  background: url(../bullet.png) no-repeat;
+  margin: 0 0 6px 0; 
+  padding: 0 0 4px 25px;
+  line-height: 1.5em;}
+
+#footer
+{ clear: both;
+  width: 100%;
+  font: normal 150% 'yanone kaffeesatz',  arial, sans-serif;
+  height: 85px;
+  padding: 20px 0 5px 0;
+  text-align: center; 
+  background: transparent;
+  margin-bottom: 20px;}
+
+#footer p
+{ padding: 0 0 10px 0;}
+
+#footer a, #footer a:hover
+{ text-decoration: none;}
+
+#footer a:hover
+{ text-decoration: none;}
+  
+form input
+{ border: 2px solid #eeeeee;
+  padding: 5px 10px;
+  background: #fff;
+  color: #F14E23;}
+   
+table
+{ margin: 10px 0 30px 0;}
+
+table tr th, table tr td
+{ background: #fff;
+  color: #00b4ff;
+  padding: 7px;
+  text-align: right;}
+
+table input{
+	background: #eeeeee;
+	color: #515151;	
+	text-align: right;
+	width: 100%;
+	height: 25px;
+	}
+  
+table tr td
+{ background: #fff;
+  color: #515151;
+  padding: 7px;
+  }
+  
+/*BIRD ADDED*/
+#myXML 
+{ width: 100%;
+  height: 250px;
+  border-color: #eeeeee;
+  border-width: 2px;	
+  margin-bottom: 15px;	
+  padding: 5px;
+ -webkit-user-select: text;
+ -khtml-user-select: text;
+ -moz-user-select: text;
+ -o-user-select: text;
+ user-select: text;
+}
+
+.button {
+   background: #00b4ff;
+   margin: 10px 0px 10px 0px;   
+   padding: 5px 10px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   color: white;
+   vertical-align: middle;
+   text-align: center;
+
+   }
+   
+.button.process{
+   background: #F14E23	;
+      font: normal 170% 'Yanone Kaffeesatz', sans-serif;
+   }
+   
+.button.save{
+	   font: normal 170% 'Yanone Kaffeesatz', sans-serif;
+	}
+	
+.button:hover {
+   background: #515151;
+   }
+.button:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
+
+#sideprice textarea{
+	width:100%;	
+	height: 100px;
+	border: 0px;
+   color: #F14E23;
+}
+
+#sidecom textarea{
+	width:100%;	
+	height: 100px;
+	border: 0px;
+   color: #F14E23;
+}

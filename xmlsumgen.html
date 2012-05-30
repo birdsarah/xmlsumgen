@@ -1,0 +1,156 @@
+<head>
+   <script type="text/javascript" src="../jquery.xml2json.js"></script>
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine&amp;v1" />
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" />
+   <title>xmlsumgen</title>
+</head>
+
+<body>
+	<div id="main">
+	    <div id="header">
+      <div id="logo">
+        <h1>xml sum <a href="#">generator</a></h1>
+        <div class="slogan">Sarah Bird</div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <li><a href="">{{> startover}}</a></li>
+        </ul>
+      </div>
+    </div>
+   	<div id="site_content">
+   		<div id="sidebar_container">
+   			{{> sidebar}}
+      	</div>
+      	<div id="content">
+		  		{{> getxml}}
+		  		{{> thedata}}
+      	</div>
+    	</div>
+    	<div id="footer">Created by Sarah Bird - sarah@bonvaya.com <br />Theme design built on <a href="http://www.html5webtemplates.co.uk">HTML5webtemplates.co.uk</a></div>
+	</div> 
+	
+</body>
+
+<template name="getxml">
+<div id="getxmlview">
+	<div class="button process">process</div> 
+     <form>
+			Enter your xml from openXdata here, and press process<textarea id="myXML"><!--example xml - please enter the group section from your openXdata form -->
+<group id="2">
+ <label>Ventas</label>
+ <input bind="lentes_45_1.00">
+   <label>Lentes 45: +1.00</label>
+   <hint>Lentes de Q45 +1.00</hint>
+ </input>
+ <input bind="lentes_45_1.50">
+   <label>Lentes 45: +1.50</label>
+   <hint>Lentes de Q45 +1.50</hint>
+ </input>
+</group>
+  			</textarea> 
+     </form>  
+     
+</div>
+</template>
+  
+<template name="thedata">  
+<div id="thedataview">    
+    <table> 
+        <col width="200" />
+        <col width="100" />
+        <col width="100" />
+    <tr>
+		<td>form binding</td>
+		{{#each sessioninfo}}<td colspan="2"><input type="text" id="formbinding" value={{formbind}} ></td>{{/each}}    
+    </tr>    
+    <tr>
+    	<th></th><th>Price</th><th>Commission</th>
+    </tr>
+    {{#each thedata}} 
+    <tr>
+    	<td>{{label.[0].text}}</td>
+    	<td><input size=2 type='text' class="data" id=pri{{_id}} value={{price}} ></td>
+    	<td><input size=2 type='text' class="data" id=com{{_id}} value={{com}} ></td>
+    </tr>
+    {{/each}}  
+    
+    </table>
+</div>
+</template>
+
+<template name="sidebar">
+	{{> sidesessionref}}
+	{{> sideprice}}
+	{{> sidecom}}
+	{{> retrievesession}}
+	{{> sidewelcome}}
+</template>
+
+<template name="sidewelcome">
+  <div id="sidewelcome">
+	  <img class="paperclip" src="../paperclip.png" alt="paperclip" />
+	  <div class="sidebar">
+	  <h3>Welcome</h3>
+	  <h4>xml sum generator</h4>
+	  <p>takes the xml from an <a href="www.openxdata.org" target="_blank">openXdata</a>
+	   form and processes it so that you can enter prices and comissions for items in your form.
+	   It then processes these and generates xml that you can paste back into the calculation field
+	   in your openXdata form to calculate the sum of the values.</p>
+	   
+	   <p>Your data is stored on the server by your session reference. Which means its pretty safe, but
+	   super safe. Use the session reference box to note your session reference or to delete your data.
+	   If you lose your session ref you can't retrieve or delete your data at a later date.</p>
+	  </div>
+  </div>
+</template>
+
+<template name="sidesessionref">
+   <div id="sidesessionref">
+	  <img class="paperclip" src="../paperclip.png" alt="paperclip" />
+	  <div class="sidebar">
+	  <h3>Session Reference</h3>
+	  <h4 id="thesessionref">{{sessionref}}</h4>
+	  <p>Use to retrieve your data later</p>
+	  	<div class="button process">delete data</div> 
+	  </div>
+	</div>
+</template>
+
+<template name="sideprice">
+   <div id="sideprice">
+	  <img class="paperclip" src="../paperclip.png" alt="paperclip" />
+	  <div class="sidebar">
+	  <h3>Price</h3>
+	  {{#each sessioninfo}}<h4 class="priceoutput"><textarea>{{lastprice}}</textarea></h4>{{/each}}
+	  <p>Click in box, press Ctl+A to select all, and Ctl+C to copy. Then paste into openXdata calculation field.</p> 
+	  </div>	  
+	</div>
+</template>
+
+<template name="sidecom">
+   <div id="sidecom">
+	  <img class="paperclip" src="../paperclip.png" alt="paperclip" />
+	  <div class="sidebar">
+	  <h3>Commission</h3>
+	  {{#each sessioninfo}}<h4 class="comoutput"><textarea>{{lastcom}}</textarea></h4>{{/each}}
+	  <p>Click in box, press Ctl+A to select all, and Ctl+C to copy. Then paste into openXdata calculation field.</p> 
+	  </div>	  
+	</div>
+</template>
+
+<template name="retrievesession">
+   <div id="retrievesession">
+	  <img class="paperclip" src="../paperclip.png" alt="paperclip" />
+	  <div class="sidebar">
+	  <h3></h3>
+	  <p>Enter an old session reference</p>
+	  <h4><form><input type="text" class="retrievesession" size="15" /></form></h4>
+     <div class="button process">retrieve data</div> 
+	  </div>
+	</div>
+</template>
+
+<template name="startover">
+	<div class="button">start over</div>
+</template>
